@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
-const category = ({ products }) => {
+const Category = ({ products }) => {
   const router = useRouter();
   const { slug } = router.query;
   return (
@@ -71,4 +71,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default category;
+export default Category;
