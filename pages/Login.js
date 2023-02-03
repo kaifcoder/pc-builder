@@ -38,7 +38,7 @@ const Login = () => {
       return;
     }
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/login`, {
+      const res = await fetch("/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
