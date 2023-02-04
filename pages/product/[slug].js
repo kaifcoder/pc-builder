@@ -76,6 +76,7 @@ const Post = ({ addToCart, products, buyNow }) => {
                       1,
                       products.price,
                       products.title,
+                      products.desc,
                       products.image,
                       products.brand,
                       products.slug
@@ -93,6 +94,7 @@ const Post = ({ addToCart, products, buyNow }) => {
                       1,
                       products.price,
                       products.title,
+                      products.desc,
                       products.image,
                       products.brand,
                       products.slug

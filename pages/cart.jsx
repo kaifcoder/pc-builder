@@ -3,6 +3,12 @@ import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon, TrashIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
+import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
+
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+);
 
 export default function Cart({
   openState,
@@ -11,7 +17,35 @@ export default function Cart({
   total,
   removeFromCart,
   clearCart,
+  user,
 }) {
+  const createCheckoutSession = async () => {
+    const stripe = await stripePromise;
+    // Call your backend to create the Checkout Session
+    const checkoutSession = await axios.post("/api/create-checkout-session", {
+      items: Object.keys(cart).map((product) => ({
+        price_data: {
+          currency: "inr",
+          unit_amount: cart[product].price * 100,
+          product_data: {
+            name: cart[product].name,
+            description: cart[product].desc,
+            images: [cart[product].image],
+          },
+        },
+        adjustable_quantity: { enabled: true, minimum: 1, maximum: 10 },
+        quantity: cart[product].qty,
+      })),
+      name: user.name,
+      email: user.email,
+    });
+    const result = await stripe.redirectToCheckout({
+      sessionId: checkoutSession.data.id,
+    });
+    if (result.error) {
+      alert(result.error.message);
+    }
+  };
   return (
     <Transition.Root show={openState || false} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={openCart}>
@@ -61,7 +95,7 @@ export default function Cart({
                           </button>
                           <button
                             type="button"
-                            className="-m-2 p-2 text-gray-400 hover:text-gray-500"
+                            className="-m-2 p-2 text-gray-400 hover:text-gray-500 outline-none"
                             onClick={openCart}
                           >
                             <span className="sr-only">Close panel</span>
@@ -145,12 +179,17 @@ export default function Cart({
                         Shipping and taxes calculated at checkout.
                       </p>
                       <div className="mt-6">
-                        <Link
-                          href="/Checkout"
-                          className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                        <button
+                          type="button"
+                          disabled={
+                            Object.keys(cart).length === 0 ||
+                            localStorage.getItem("token") === null
+                          }
+                          onClick={createCheckoutSession}
+                          className="flex items-center justify-center w-full rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 disabled:bg-gray-500"
                         >
                           Checkout
-                        </Link>
+                        </button>
                       </div>
                       <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                         <p>

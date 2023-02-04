@@ -2,141 +2,118 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div>
-      <section className="text-gray-600 body-font relative">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-              Contact Us
-            </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-              gentrify.
-            </p>
+    <section
+      className="relative pt-24 pb-36 bg-gray-200
+    overflow-hidden"
+    >
+      <div
+        className="relative z-10 container px-4 mx-auto
+        
+      "
+      >
+        <h2 className="mb-5 text-6xl md:text-8xl xl:text-10xl text-center font-bold font-heading tracking-px-n leading-none ">
+          Get connected
+        </h2>
+        <p className="mb-20 text-lg text-center font-medium leading-normal md:max-w-lg mx-auto text-gray-900">
+          Lorem ipsum dolor sit amet, to the con adipiscing. Volutpat tempor to
+          the condimentum vitae vel purus.
+        </p>
+        <div className="flex flex-wrap -m-3">
+          <div className="w-full md:w-1/3 p-3">
+            <div className="p-11 h-full text-center bg-white bg-opacity-90 border border-blue-100 rounded-xl shadow-11xl">
+              <div className="mb-6 relative mx-auto w-16 h-16 bg-indigo-600 rounded-full">
+                <div className="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                  <svg
+                    width="32"
+                    height="33"
+                    viewbox="0 0 32 33"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 11.1666L14.5208 18.1805C15.4165 18.7776 16.5835 18.7776 17.4792 18.1805L28 11.1666M6.66667 25.8333H25.3333C26.8061 25.8333 28 24.6394 28 23.1666V9.83329C28 8.36053 26.8061 7.16663 25.3333 7.16663H6.66667C5.19391 7.16663 4 8.36053 4 9.83329V23.1666C4 24.6394 5.19391 25.8333 6.66667 25.8333Z"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 className="mb-3 text-xl font-bold font-heading leading-snug">
+                Send Email
+              </h3>
+              <p className="font-medium leading-relaxed">info@mail.com</p>
+              <p className="font-medium leading-relaxed">support@mail.com</p>
+            </div>
           </div>
-          <div className="lg:w-1/2 md:w-2/3 mx-auto">
-            <div className="flex flex-wrap -m-2">
-              <div className="p-2 w-1/2">
-                <div className="relative">
-                  <label for="name" className="leading-7 text-sm text-gray-600">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
-                </div>
-              </div>
-              <div className="p-2 w-1/2">
-                <div className="relative">
-                  <label
-                    for="email"
-                    className="leading-7 text-sm text-gray-600"
+          <div className="w-full md:w-1/3 p-3">
+            <div className="p-11 h-full text-center bg-white bg-opacity-90 border border-blue-100 rounded-xl shadow-11xl">
+              <div className="mb-6 relative mx-auto w-16 h-16 bg-white border border-blue-200 rounded-full">
+                <div className="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                  <svg
+                    width="32"
+                    height="33"
+                    viewbox="0 0 32 33"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
+                    <path
+                      d="M4 7.16667C4 5.69391 5.19391 4.5 6.66667 4.5H11.039C11.6129 4.5 12.1224 4.86724 12.3039 5.4117L14.301 11.4029C14.5108 12.0324 14.2258 12.7204 13.6324 13.0172L10.6227 14.522C12.0923 17.7816 14.7184 20.4077 17.978 21.8773L19.4828 18.8676C19.7796 18.2742 20.4676 17.9892 21.0971 18.199L27.0883 20.1961C27.6328 20.3776 28 20.8871 28 21.461V25.8333C28 27.3061 26.8061 28.5 25.3333 28.5H24C12.9543 28.5 4 19.5457 4 8.5V7.16667Z"
+                      stroke="#4F46E5"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
                 </div>
               </div>
-              <div className="p-2 w-full">
-                <div className="relative">
-                  <label
-                    for="message"
-                    className="leading-7 text-sm text-gray-600"
+              <h3 className="mb-3 text-xl font-bold font-heading leading-snug">
+                Call Us
+              </h3>
+              <p className="font-medium leading-relaxed">+1 8408 412 569</p>
+              <p className="font-medium leading-relaxed">+1 8408 412 569</p>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 p-3">
+            <div className="p-11 h-full text-center bg-white bg-opacity-90 border border-blue-100 rounded-xl shadow-11xl">
+              <div className="mb-6 relative mx-auto w-16 h-16 bg-white border border-blue-200 rounded-full">
+                <div className="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                  <svg
+                    width="32"
+                    height="33"
+                    viewbox="0 0 32 33"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                  ></textarea>
+                    <path
+                      d="M23.5431 22.7091C22.1797 24.0725 19.192 27.0602 17.4133 28.8389C16.6323 29.62 15.3693 29.6203 14.5883 28.8392C12.8393 27.0903 9.91373 24.1647 8.45818 22.7091C4.29259 18.5435 4.29259 11.7898 8.45818 7.62419C12.6238 3.4586 19.3775 3.4586 23.5431 7.62419C27.7087 11.7898 27.7087 18.5435 23.5431 22.7091Z"
+                      stroke="#4F46E5"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M20.0007 15.1667C20.0007 17.3758 18.2098 19.1667 16.0007 19.1667C13.7915 19.1667 12.0007 17.3758 12.0007 15.1667C12.0007 12.9575 13.7915 11.1667 16.0007 11.1667C18.2098 11.1667 20.0007 12.9575 20.0007 15.1667Z"
+                      stroke="#4F46E5"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
                 </div>
               </div>
-              <div className="p-2 w-full">
-                <button className="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
-                  Button
-                </button>
-              </div>
-              <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                <a className="text-blue-500">example@email.com</a>
-                <p className="leading-normal my-5">
-                  49 Smith St.
-                  <br />
-                  Saint Cloud, MN 56301
-                </p>
-                <span className="inline-flex">
-                  <a className="text-gray-500">
-                    <svg
-                      fill="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                    </svg>
-                  </a>
-                  <a className="ml-4 text-gray-500">
-                    <svg
-                      fill="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                    </svg>
-                  </a>
-                  <a className="ml-4 text-gray-500">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                    >
-                      <rect
-                        width="20"
-                        height="20"
-                        x="2"
-                        y="2"
-                        rx="5"
-                        ry="5"
-                      ></rect>
-                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                    </svg>
-                  </a>
-                  <a className="ml-4 text-gray-500">
-                    <svg
-                      fill="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                    </svg>
-                  </a>
-                </span>
-              </div>
+              <h3 className="mb-3 text-xl font-bold font-heading leading-snug">
+                Address
+              </h3>
+              <p className="font-medium max-w-xs mx-auto leading-relaxed">
+                380 St Kilda Road, Melbourne VIC 3004, Australia
+              </p>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

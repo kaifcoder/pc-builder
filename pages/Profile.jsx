@@ -1,7 +1,8 @@
+import ProfileComponent from "@/components/Profile";
 import Router from "next/router";
 import React, { useEffect } from "react";
 
-const Profile = () => {
+const Profile = ({ user }) => {
   useEffect(() => {
     if (!localStorage.getItem("token")) {
       Router.push("/");
@@ -9,8 +10,8 @@ const Profile = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Profile</h1>
+    <div className="m-12">
+      <ProfileComponent user={user} />
     </div>
   );
 };

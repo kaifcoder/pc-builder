@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import Router from "next/router";
@@ -92,7 +93,7 @@ const Register = () => {
 
   return (
     <div>
-      <section className="bg-gray-50 p-10">
+      <section className="bg-gray-50 py-5">
         <div className="flex flex-col items-center justify-center p-10 mx-auto h-full lg:py-0">
           <Link
             href="/"
@@ -114,79 +115,60 @@ const Register = () => {
               </h1>
               <form className="space-y-4 md:space-y-6">
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block mb-2 text-sm font-medium text-gray-900"
-                  >
-                    Your Name
-                  </label>
-                  <input
+                  <TextField
+                    fullWidth
+                    variant="outlined"
                     type="name"
                     name="name"
+                    label="Name"
                     onChange={(e) => {
                       setName(e.target.value);
                     }}
                     id="name"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     placeholder="John Doe"
-                    required=""
+                    required
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block mb-2 text-sm font-medium text-gray-900"
-                  >
-                    Your email
-                  </label>
-                  <input
+                  <TextField
                     type="email"
                     name="email"
+                    label="Email"
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
                     id="email"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     placeholder="name@company.com"
-                    required=""
+                    required
+                    fullWidth
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="password"
-                    className="block mb-2 text-sm font-medium text-gray-900 "
-                  >
-                    Password
-                  </label>
-                  <input
+                  <TextField
                     type="password"
                     name="password"
+                    label="Password"
+                    fullWidth
                     onChange={(e) => {
                       setPassword(e.target.value);
                     }}
                     id="password"
                     placeholder="••••••••"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                    required=""
+                    required
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="confirm-password"
-                    className="block mb-2 text-sm font-medium text-gray-900 "
-                  >
-                    Confirm password
-                  </label>
-                  <input
+                  <TextField
                     type="password"
                     name="confirm-password"
+                    label="Confirm Password"
+                    fullWidth
                     onChange={(e) => {
                       setConfirmPassword(e.target.value);
                     }}
                     id="confirm-password"
                     placeholder="••••••••"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                    required=""
+                    required
                   />
                 </div>
 

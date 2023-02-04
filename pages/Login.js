@@ -93,7 +93,7 @@ const Login = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     fullWidth
                     autoComplete="email"
-                    variant="standard"
+                    variant="outlined"
                   />
                 </div>
 
@@ -106,7 +106,7 @@ const Login = () => {
                     id="password"
                     onChange={(e) => setPassword(e.target.value)}
                     fullWidth
-                    variant="standard"
+                    variant="outlined"
                   />
                 </div>
 

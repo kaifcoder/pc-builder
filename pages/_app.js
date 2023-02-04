@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }) {
     let data = jwt.decode(token);
     console.log(data);
     if (token) {
-      setUser({ value: token, name: data.name });
+      setUser({ value: token, name: data.name, email: data.email });
       setKey(Math.random());
     }
   }, [router.query]);
@@ -72,7 +72,7 @@ export default function App({ Component, pageProps }) {
     setTotal(0);
     saveCart({});
   };
-  const addToCart = (itemcode, qty, price, name, image, brand, slug) => {
+  const addToCart = (itemcode, qty, price, name, desc, image, brand, slug) => {
     toast.success("Item added to cart", {
       position: "top-left",
     });
@@ -84,6 +84,7 @@ export default function App({ Component, pageProps }) {
         qty: 1,
         price: price,
         name: name,
+        desc: desc,
         image: image,
         brand: brand,
         slug: slug,
@@ -107,7 +108,7 @@ export default function App({ Component, pageProps }) {
     saveCart(newCart);
   };
 
-  const buyNow = (itemcode, qty, price, name, image, brand, slug) => {
+  const buyNow = (itemcode, qty, price, name, desc, image, brand, slug) => {
     saveCart({});
     let newCart = {};
     if (newCart[itemcode]) {
@@ -117,6 +118,7 @@ export default function App({ Component, pageProps }) {
         qty: 1,
         price: price,
         name: name,
+        desc: desc,
         image: image,
         brand: brand,
         slug: slug,
@@ -148,6 +150,7 @@ export default function App({ Component, pageProps }) {
         removeFromCart={removeFromCart}
         clearCart={clearCart}
         addToCart={addToCart}
+        user={user}
       />
       <Navbar
         logout={logout}
@@ -180,6 +183,7 @@ export default function App({ Component, pageProps }) {
         removeFromCart={removeFromCart}
         clearCart={clearCart}
         total={total}
+        user={user}
         {...pageProps}
       />
       <Footer />
